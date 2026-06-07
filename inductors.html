@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Катушки индуктивности | Радиотехника</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="forum-wrapper">
+    <header class="forum-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <h1>Катушки индуктивности</h1>
+            </div>
+        </div>
+    </header>
+    <main class="forum-main">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <strong>Катушки индуктивности</strong>
+        </div>
+
+        <section>
+            <h2>Что такое катушка индуктивности?</h2>
+            <p>Катушка индуктивности — пассивный элемент, способный накапливать энергию в магнитном поле. Основная характеристика — индуктивность (Генри, обычно мкГн, мГн). При протекании тока создаёт ЭДС самоиндукции, препятствующую изменению тока.</p>
+            <p>Применяется в фильтрах, колебательных контурах, трансформаторах, дросселях питания, ВЧ-цепях.</p>
+            <h3>Основные параметры</h3>
+            <ul>
+                <li><strong>Индуктивность (L)</strong> — способность накапливать магнитный поток.</li>
+                <li><strong>Добротность (Q)</strong> — отношение реактивного сопротивления к активному.</li>
+                <li><strong>Ток насыщения</strong> — для катушек с сердечником.</li>
+                <li><strong>Собственная резонансная частота</strong> — из-за паразитной ёмкости.</li>
+            </ul>
+            <p>Типы: с ферритовым или металлическим сердечником, тороидальные, многослойные, на кольцах, чип-индуктивности.</p>
+        </section>
+
+        <section>
+            <h2>Калькулятор цветовой маркировки дросселей</h2>
+            <p>Дроссели (и некоторые катушки) маркируются цветными кольцами, аналогично резисторам. Значение индуктивности получается в микрогенри (мкГн). Обычно используется 4 или 5 колец. Первые две (или три) полосы — значащие цифры, следующая — множитель, последняя — допуск.</p>
+            <fieldset>
+                <legend>Выбор количества полос</legend>
+                <div class="calc-row">
+                    <label>Количество полос:</label>
+                    <select id="inductorBandsCount">
+                        <option value="4">4 полосы</option>
+                        <option value="5" selected>5 полос</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Цветные полосы дросселя</legend>
+                <div id="inductorBandsContainer"></div>
+                <div id="inductorMarkingResult" class="result-box">
+                    Индуктивность: —<br>
+                    Допуск: —
+                </div>
+            </fieldset>
+        </section>
+
+        <section>
+            <h3>Таблица цветовой маркировки</h3>
+            <table class="params-table">
+                <tr><th>Цвет</th><th>Цифра</th><th>Множитель (мкГн)</th><th>Допуск</th></tr>
+                <tr><td>Чёрный</td><td>0</td><td>×1</td><td>±20%</td></tr>
+                <tr><td>Коричневый</td><td>1</td><td>×10</td><td>±1%</td></tr>
+                <tr><td>Красный</td><td>2</td><td>×100</td><td>±2%</td></tr>
+                <tr><td>Оранжевый</td><td>3</td><td>×1000</td><td>-</td></tr>
+                <tr><td>Жёлтый</td><td>4</td><td>×10000</td><td>-</td></tr>
+                <tr><td>Зелёный</td><td>5</td><td>-</td><td>±0.5%</td></tr>
+                <tr><td>Синий</td><td>6</td><td>-</td><td>±0.25%</td></tr>
+                <tr><td>Фиолетовый</td><td>7</td><td>-</td><td>±0.1%</td></tr>
+                <tr><td>Серый</td><td>8</td><td>-</td><td>±0.05%</td></tr>
+                <tr><td>Белый</td><td>9</td><td>-</td><td>-</td></tr>
+                <tr><td>Золотой</td><td>-</td><td>×0.1</td><td>±5%</td></tr>
+                <tr><td>Серебряный</td><td>-</td><td>×0.01</td><td>±10%</td></tr>
+            </table>
+            <p><em>Примечание: стандарт IEC 60062. Для дросселей множитель указывает значение в мкГн. Например: коричневый-чёрный-красный-серебряный = 10 * 100 = 1000 мкГн = 1 мГн, ±10%.</em></p>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

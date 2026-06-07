@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резисторы | Радиотехника</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="forum-wrapper">
+    <header class="forum-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <h1>Резисторы</h1>
+            </div>
+        </div>
+    </header>
+    <main class="forum-main">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <strong>Резисторы</strong>
+        </div>
+        
+        <section>
+            <h2>Что такое резистор?</h2>
+            <p>Резистор — пассивный элемент электрической цепи, обладающий определённым сопротивлением электрическому току. Основное назначение — ограничение тока, деление напряжения, выделение тепла, согласование сигналов.</p>
+            <p>Резисторы бывают <strong>постоянные</strong> (фиксированное сопротивление) и <strong>переменные</strong> (регулируемые), а также <strong>подстроечные</strong>. Выпускаются в различных корпусах: SMD для поверхностного монтажа и выводные для монтажа в отверстия.</p>
+            <p>Основные параметры: номинальное сопротивление (Ом, кОм, МОм), допустимая мощность рассеяния (Вт), точность (допуск), температурный коэффициент сопротивления (ТКС).</p>
+        </section>
+
+        <section>
+            <h2>Калькулятор цветовой маркировки резисторов</h2>
+            <fieldset>
+                <legend>Выберите количество полос</legend>
+                <div class="calc-row">
+                    <label>Количество полос:</label>
+                    <select id="bandsCount">
+                        <option value="4">4 полосы</option>
+                        <option value="5" selected>5 полос</option>
+                        <option value="6">6 полос</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset id="resistorMarkingFieldset">
+                <legend>Калькулятор цветовых полос</legend>
+                <div id="bandsContainer"></div>
+                <div id="markingResult" class="result-box">
+                    Сопротивление: —<br>
+                    Допуск: —<br>
+                    <span id="tcsResult"></span>
+                </div>
+            </fieldset>
+        </section>
+
+        <section>
+            <h2>Калькулятор общего сопротивления резисторов</h2>
+            <fieldset>
+                <legend>Соединение резисторов</legend>
+                <div class="calc-row">
+                    <label>Тип соединения:</label>
+                    <select id="connectionType">
+                        <option value="series">Последовательное</option>
+                        <option value="parallel">Параллельное</option>
+                    </select>
+                </div>
+                <div id="resistorsInputs">
+                    <div class="calc-row"><label>R1 (Ом):</label><input type="number" id="r1" value="1000" step="any"></div>
+                    <div class="calc-row"><label>R2 (Ом):</label><input type="number" id="r2" value="2000" step="any"></div>
+                    <div class="calc-row"><label>R3 (Ом):</label><input type="number" id="r3" value="0" step="any"></div>
+                    <div class="calc-row"><label>R4 (Ом):</label><input type="number" id="r4" value="0" step="any"></div>
+                    <div class="calc-row"><label>R5 (Ом):</label><input type="number" id="r5" value="0" step="any"></div>
+                </div>
+                <button id="calcTotalBtn">Рассчитать общее сопротивление</button>
+                <div id="totalResult" class="result-box">Общее сопротивление: —</div>
+            </fieldset>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

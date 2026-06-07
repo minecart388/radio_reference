@@ -1,0 +1,229 @@
+/* ========== Оформление в стиле «Радио-форум» ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #d7c7a1;
+    font-family: 'Courier New', 'Lucida Console', monospace;
+    color: #2c2418;
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+.forum-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff6ea;
+    border: 4px double #b0976a;
+    padding: 1.2rem 1.8rem 2rem;
+}
+
+.forum-header {
+    background: #fef0db;
+    border-bottom: 3px solid #b38f5a;
+    margin-bottom: 1.8rem;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo-area h1 {
+    font-size: 1.8rem;
+    color: #4a301a;
+    display: inline-block;
+    margin: 0 0.5rem 0 0;
+}
+
+.breadcrumbs {
+    margin: 0.5rem 0 1.2rem;
+    font-size: 0.85rem;
+    color: #6b4e2a;
+}
+
+.breadcrumbs a {
+    color: #5a3e1b;
+    text-decoration: none;
+    border-bottom: 1px dotted #bc9f6e;
+}
+
+.breadcrumbs a:hover {
+    border-bottom: 1px solid;
+}
+
+.forum-main {
+    background: #ffffffd9;
+    border: 1px solid #cbb786;
+    padding: 1.5rem;
+}
+
+.section-category {
+    margin-top: 1.8rem;
+}
+.section-category h2 {
+    background: #efe3cd;
+    padding: 0.4rem 0.8rem;
+    border-left: 6px solid #b48b4a;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card {
+    background: #fef6ea;
+    border: 2px solid #d6bd8c;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    transition: 0.1s linear;
+}
+.feature-card:hover {
+    background: #f6ecdb;
+    border-color: #a77f45;
+}
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #402d18;
+    margin-bottom: 0.5rem;
+}
+.feature-card p {
+    font-size: 0.85rem;
+    color: #4d3a23;
+    margin-bottom: 0.8rem;
+}
+.button {
+    background: #e9dfce;
+    border: 2px outset #ccb689;
+    padding: 0.3rem 0.8rem;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2c2418;
+    display: inline-block;
+    font-size: 0.85rem;
+}
+.button:hover {
+    background: #ddceac;
+    border: 2px inset #ccb689;
+}
+
+.params-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: #fffcf5;
+}
+.params-table th, .params-table td {
+    border: 1px solid #cbb786;
+    padding: 8px;
+    text-align: left;
+    background-color: #fffcf0;
+}
+.params-table th {
+    background: #efe3cd;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 2px solid #b38f5a;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #fefaf2;
+}
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: #6b4c2c;
+    background: #f4e9d8;
+    border: 1px solid #b38f5a;
+    font-size: 0.9rem;
+}
+.calc-row {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.calc-row label {
+    width: 180px;
+    font-weight: bold;
+}
+input, select, textarea {
+    background: #fffff2;
+    border: 1px solid #cfbe93;
+    font-family: 'Courier New', monospace;
+    padding: 0.4rem;
+}
+button, input[type="submit"] {
+    background: #e9dfce;
+    border: 2px outset #ccb689;
+    padding: 0.4rem 1rem;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0.3rem 0;
+}
+button:hover, input[type="submit"]:hover {
+    background: #ddceac;
+    border: 2px inset #ccb689;
+}
+.result-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f2ecdf;
+    border: 1px solid #cbb87b;
+    font-weight: bold;
+    font-size: 1em;
+}
+.btn-back {
+    background: #e9dfce;
+    border: 2px outset #ccb689;
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    color: #2c2418;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+.btn-back:hover {
+    background: #ddceac;
+    border: 2px inset #ccb689;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+    .forum-wrapper {
+        padding: 0.8rem;
+    }
+    .forum-main {
+        padding: 1rem;
+    }
+    .calc-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .calc-row label {
+        width: auto;
+        margin-bottom: 0.3rem;
+    }
+    input, select, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .params-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

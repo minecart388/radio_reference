@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конденсаторы | Радиотехника</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="forum-wrapper">
+    <header class="forum-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <h1>Конденсаторы</h1>
+            </div>
+        </div>
+    </header>
+    <main class="forum-main">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <strong>Конденсаторы</strong>
+        </div>
+
+        <section>
+            <h2>Что такое конденсатор?</h2>
+            <p>Конденсатор — двухполюсник с определённым значением ёмкости и малой проводимостью; устройство для накопления заряда и энергии электрического поля. Основная характеристика — ёмкость (Фарады, обычно мкФ, нФ, пФ).</p>
+            <p>По типу диэлектрика различают: керамические, электролитические, плёночные, танталовые, вакуумные. Электролитические конденсаторы имеют полярность, их включают строго с учётом знака напряжения.</p>
+            <p>Применение: фильтры источников питания, сглаживание пульсаций, разделительные цепи в усилителях, колебательные контуры, таймеры.</p>
+            <h3>Маркировка конденсаторов</h3>
+            <p>Мелкие конденсаторы маркируются кодами (например, 104 = 100 нФ) или цветными полосками. Электролитические обычно имеют прямое указание ёмкости и рабочего напряжения.</p>
+            <table class="params-table">
+                <tr><th>Тип</th><th>Ёмкость, диапазон</th><th>Особенности</th></tr>
+                <tr><td>Керамический</td><td>1 пФ – 100 мкФ</td><td>Низкая индуктивность, маленький размер</td></tr>
+                <tr><td>Электролитический</td><td>0.1 мкФ – 10000 мкФ</td><td>Полярность, большая ёмкость</td></tr>
+                <tr><td>Плёночный</td><td>1 нФ – 50 мкФ</td><td>Высокая стабильность, низкие потери</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Калькулятор частоты колебательного LC-контура</h2>
+            <fieldset>
+                <legend>Резонансная частота f = 1 / (2π√(LC))</legend>
+                <div class="calc-row">
+                    <label>Индуктивность L:</label>
+                    <input type="number" id="lValue" value="100" step="any">
+                    <select id="lUnit">
+                        <option value="1e-6">мкГн (μH)</option>
+                        <option value="1e-3">мГн (mH)</option>
+                        <option value="1" selected>Гн (H)</option>
+                    </select>
+                </div>
+                <div class="calc-row">
+                    <label>Ёмкость C:</label>
+                    <input type="number" id="cValue" value="1" step="any">
+                    <select id="cUnit">
+                        <option value="1e-12">пФ (pF)</option>
+                        <option value="1e-9">нФ (nF)</option>
+                        <option value="1e-6" selected>мкФ (μF)</option>
+                        <option value="1e-3">мФ (mF)</option>
+                        <option value="1">Ф (F)</option>
+                    </select>
+                </div>
+                <button id="calcLcBtn">Рассчитать частоту</button>
+                <div id="lcResult" class="result-box">Частота: —</div>
+            </fieldset>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
